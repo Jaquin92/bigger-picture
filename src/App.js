@@ -86,10 +86,8 @@ class App extends Component {
 
         <img style={{ cursor: "pointer" }} onClick={() => window.scrollTo(0, 0)} className="logo" src={logo} alt="" />
         <header>
-
-          <label style={{ backgroundColor: 'steelblue', color: 'white', padding: 10, borderRadius: 4, pointer: 'cursor', display: "flex" }}>
+          <div style={{ display: "flex" }} >    <label style={{ backgroundColor: 'steelblue', color: 'white', padding: 10, borderRadius: 4, pointer: 'cursor', display: "flex" }}>
             <FileUploader
-
               accept="image/*"
               name="thumbnail"
               randomizeFilename
@@ -99,8 +97,10 @@ class App extends Component {
               onUploadSuccess={this.handleUploadSuccess}
               onProgress={this.handleProgress}
             />
-            <button onClick={() => this.addphoto()} >Submit</button>
+
           </label>
+            <button style={{ padding: 10, borderRadius: 4, pointer: 'cursor', display: "flex" }} onClick={() => this.addphoto()} >Submit</button> </div>
+
 
         </header>
         <div className="container" >

@@ -9,6 +9,10 @@ button{
   border:black solid 1px;
 }
 
+label input{
+  width:50%;
+}
+
 .pic{
   display: flex;
   flex-direction: column;
