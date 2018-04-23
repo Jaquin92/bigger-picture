@@ -33,7 +33,7 @@ app.post("/api/post", (req, res) => {
 
     axios.post(`https://www.googleapis.com/urlshortener/v1/url?key=${str}`, obj).then((url) => {
 
-        dbInstance.addPhoto([req.body.url, url.data.id]).then((r) => {
+        dbInstance.addPhoto([req.body.longUrl, url.data.id]).then((r) => {
             res.status(200).send(r)
         }).catch(err => console.log(err))
 
